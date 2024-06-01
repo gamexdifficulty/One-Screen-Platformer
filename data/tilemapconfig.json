@@ -1,0 +1,16 @@
+{   
+    "tile_size":64,
+    "width":"screen",
+    "height":"screen",
+    "sprites":{
+        "0":"data/sprites/tile0.png",
+        "1":"data/sprites/tile1.png",
+        "2":"data/sprites/tile2.png",
+        "3":"data/sprites/tile3.png",
+        "4":"data/sprites/tile4.png",
+        "5":"data/sprites/tile5.png",
+        "6":"data/sprites/tile6.png",
+        "7":"data/sprites/tile7.png",
+        "8":"data/sprites/tile8.png"
+    }
+}
