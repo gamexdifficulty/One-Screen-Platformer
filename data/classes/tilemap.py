@@ -5,7 +5,7 @@ from data.classes.player import Player
 from data.classes.camera import Camera
 
 class Tilemap:
-    def __init__(self,engine) -> None:
+    def __init__(self,engine,camera:Camera=None) -> None:
         self.engine = engine
         self.tile_size = 0
         self.width = 0
@@ -13,7 +13,9 @@ class Tilemap:
         self.tilemap = []
         self.tile_sprites = {}
         self.sprite = pygame.Surface((self.width*self.tile_size,self.height*self.tile_size)).convert_alpha()
-        self.camera = Camera(self.engine)
+        self.camera = camera
+        if camera == None:
+            self.camera = Camera(self.engine)
 
         self.load_config()
 
