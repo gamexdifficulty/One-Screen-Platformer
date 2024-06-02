@@ -86,9 +86,21 @@ class Tilemap:
                     if tile != None:
                         self.sprite.blit(self.tile_sprites[tile],(x*self.tile_size,y*self.tile_size))
 
-    def get_collision(self,player:Player):
-        pass
+    def get_collisions(self,player:Player,radius):
+        mx = int(min(max(divmod(player.x+player.SIZE/2,self.tile_size)[0],0),self.width-1))
+        my = int(min(max(divmod(player.y+player.SIZE/2,self.tile_size)[0],0),self.height-1))
+        rects = []
+        for y in range(radius*2+1):
+            y = int(my+y-radius/2)
+            if y >= 0 and y <= self.height-1:
+                for x in range(radius*2+1):
+                    x = int(mx+x-radius/2) 
+                    if x >= 0 and x <= self.width-1:
+                        if self.tilemap[y][x] != None:
+                            rects.append(pygame.Rect(x*self.tile_size,y*self.tile_size,self.tile_size,self.tile_size))
 
+        return rects
+    
     def update(self):
         pass
 
