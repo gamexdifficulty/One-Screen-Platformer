@@ -1,0 +1,12 @@
+{
+    "acc":1000,
+    "dcc":1500,
+    "vel":225,
+    "jump":950,
+    "gravity":3000,
+    "max_gravity":3000,
+    "coyote_time":0.2,
+    "jump_buffer":0.1,
+    "size":64,
+    "sprites":["data/sprites/player.png"]
+}
